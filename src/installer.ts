@@ -148,7 +148,7 @@ async function acquireVersion(version: Version): Promise<string> {
 
   if (version.url.endsWith('.tar.gz')) {
     toolPath = await cache.extractTar(toolPath)
-    toolPath = path.join(toolPath, toolFilename)
+    toolPath = path.join(toolPath, 'output', toolFilename)
   }
 
   switch (process.platform) {
